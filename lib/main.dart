@@ -1,41 +1,29 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MaterialApp(
+      title: "pokedex",
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+    ));
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                    radius: 80.0,
-                    backgroundColor: Colors.yellow,
-                    backgroundImage: NetworkImage(
-                        'https://i.ytimg.com/vi/97kZWuVkpsY/maxresdefault.jpg')),
-                Text(
-                  'pikacu',
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
-              ],
-            ),
-          ),
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("pokedux"),
+          backgroundColor: Colors.cyan,
         ),
-      ),
-    );
+        body: Center(
+          child: Text("hellow"),
+        ),
+        drawer: Drawer(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.cyan,
+          child: Icon(
+            Icons.refresh,
+          ),
+        ));
   }
 }
