@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,16 +13,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Pokedex Demo'),
-            backgroundColor: Colors.green,
-          ),
-          backgroundColor: Colors.greenAccent,
-          body: Center(
+        backgroundColor: Colors.blueGrey,
+        body: SafeArea(
+          child: Center(
             child: Column(
-              children: [Text('poke')],
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                    radius: 80.0,
+                    backgroundColor: Colors.yellow,
+                    backgroundImage: NetworkImage(
+                        'https://i.ytimg.com/vi/97kZWuVkpsY/maxresdefault.jpg')),
+                Text(
+                  'pikacu',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ],
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
