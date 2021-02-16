@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -18,12 +20,16 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     fetchData();
+    print("2nd wor");
   }
 
-  fetchData() async {}
+  fetchData() async {
+    var res = http.get(url);
+    print(res);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
