@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("pokedux"),
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.grey,
         ),
         body: Center(
           child: Text("hellow"),
