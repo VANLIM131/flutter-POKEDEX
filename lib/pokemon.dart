@@ -32,13 +32,12 @@ class Pokemon {
   String candy;
   int candyCount;
   String egg;
-  double spawnChance;
-  double avgSpawns;
+  String spawnChance;
+  String avgSpawns;
   String spawnTime;
   List<double> multipliers;
   List<String> weaknesses;
   List<NextEvolution> nextEvolution;
-  List<PrevEvolution> prevEvolution;
 
   Pokemon(
       {this.id,
@@ -56,8 +55,7 @@ class Pokemon {
       this.spawnTime,
       this.multipliers,
       this.weaknesses,
-      this.nextEvolution,
-      this.prevEvolution});
+      this.nextEvolution});
 
   Pokemon.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -70,21 +68,15 @@ class Pokemon {
     candy = json['candy'];
     candyCount = json['candy_count'];
     egg = json['egg'];
-    spawnChance = json['spawn_chance'];
-    avgSpawns = json['avg_spawns'];
+    spawnChance = json['spawn_chance'].toString();
+    avgSpawns = json['avg_spawns'].toString();
     spawnTime = json['spawn_time'];
-    multipliers = json['multipliers'].cast<double>();
+    multipliers = json['multipliers']?.cast<double>();
     weaknesses = json['weaknesses'].cast<String>();
     if (json['next_evolution'] != null) {
       nextEvolution = new List<NextEvolution>();
       json['next_evolution'].forEach((v) {
         nextEvolution.add(new NextEvolution.fromJson(v));
-      });
-    }
-    if (json['prev_evolution'] != null) {
-      prevEvolution = new List<PrevEvolution>();
-      json['prev_evolution'].forEach((v) {
-        prevEvolution.add(new PrevEvolution.fromJson(v));
       });
     }
   }
@@ -109,10 +101,6 @@ class Pokemon {
     if (this.nextEvolution != null) {
       data['next_evolution'] =
           this.nextEvolution.map((v) => v.toJson()).toList();
-    }
-    if (this.prevEvolution != null) {
-      data['prev_evolution'] =
-          this.prevEvolution.map((v) => v.toJson()).toList();
     }
     return data;
   }

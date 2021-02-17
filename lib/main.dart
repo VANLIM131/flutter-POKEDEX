@@ -20,9 +20,14 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     fetchData();
+    print("2nd work");
   }
 
-  fetchData() async {}
+  fetchData() async {
+    var res =
+        await http.get(Uri.https('jsonplaceholder.typicode.com', 'albums/1'));
+    print(res.body);
+  }
 
   @override
   Widget build(BuildContext context) {
