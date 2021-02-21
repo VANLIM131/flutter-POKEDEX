@@ -35,9 +35,9 @@ fake_async
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib/
 http
-2.0
-file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.11.3+17/
-file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.11.3+17/lib/
+2.4
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2/
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2/lib/
 http_parser
 2.3
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/
@@ -54,6 +54,10 @@ path
 2.12
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0/lib/
+pedantic
+2.12
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.10.0/
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.10.0/lib/
 source_span
 2.12
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.0/
