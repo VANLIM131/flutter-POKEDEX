@@ -86,58 +86,6 @@ _setColor(Pokemon pokemon) {
   Color brownDark = Color(0xCB44372D);
   Color greyDark = Color(0xCB474545);
   Color dragon = Color(0xCBAD084E);
-  Color pokeColor;
-
-  if (pokemon != null) {
-    for (int i = 0; i < pokemon.types.length; i++) {
-      if (pokemon.types[i].type.name == "water") {
-        pokeColor = blue;
-      }
-      if (pokemon.types[i].type.name == "fire") {
-        pokeColor = red;
-      }
-      if (pokemon.types[i].type.name == "grass") {
-        pokeColor = green;
-      }
-      if (pokemon.types[i].type.name == "bug") {
-        pokeColor = yellow;
-      }
-      if (pokemon.types[i].type.name == "normal") {
-        pokeColor = grey;
-      }
-      if (pokemon.types[i].type.name == "poison") {
-        pokeColor = purple;
-      }
-      if (pokemon.types[i].type.name == "electric") {
-        pokeColor = lightblue;
-      }
-      if (pokemon.types[i].type.name == "ground") {
-        pokeColor = earth;
-      }
-      if (pokemon.types[i].type.name == "fairy") {
-        pokeColor = fairy;
-      }
-      if (pokemon.types[i].type.name == "fighting") {
-        pokeColor = orange;
-      }
-      if (pokemon.types[i].type.name == "psychic") {
-        pokeColor = brownDark;
-      }
-      if (pokemon.types[i].type.name == "rock") {
-        pokeColor = greyDark;
-      }
-      if (pokemon.types[i].type.name == "ghost") {
-        pokeColor = purple;
-      }
-      if (pokemon.types[i].type.name == "ice") {
-        pokeColor = blue;
-      }
-      if (pokemon.types[i].type.name == "dragon") {
-        pokeColor = dragon;
-      }
-
-      return pokeColor;
-    }
-  }
-  return defaultColor;
+  Color pokeColor = Colors.blueGrey;
+  ;
 }

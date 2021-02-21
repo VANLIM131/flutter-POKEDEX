@@ -56,6 +56,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_keyboard_visibility",
+      "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility-0.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///D:/System/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -96,6 +102,12 @@
       "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "search_widget",
+      "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/search_widget-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
     },
     {
       "name": "sky_engine",
@@ -158,7 +170,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-21T11:14:53.639084Z",
+  "generated": "2021-02-21T11:56:29.332704Z",
   "generator": "pub",
   "generatorVersion": "2.12.0-259.8.beta"
 }

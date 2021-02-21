@@ -3,9 +3,11 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'pokemon.dart';
 import 'pokemon_card.dart';
+import 'dart:io';
 
 class MyHomePage extends StatefulWidget {
-  static const String url =  'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
+  static const String url =
+      'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -14,56 +16,75 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Pokemons pokemons;
 
-
   Color bgColor = Color(0xFF393636);
-  Future<List<Pokemons>> _fetchData() async{
-   final response = await http.get(MyHomePage.url);
-   final decode = json.decode(response.body);
-   final data = Pokemons.fromJson(decode['results']);
-   print(data.pokemons);
+  Future<List<Pokemons>> _fetchData() async {
+    final response = await http.get(MyHomePage.url);
+    final decode = json.decode(response.body);
+    final data = Pokemons.fromJson(decode['results']);
+    print(data.pokemons);
 
-   setState(() {
-     pokemons = data;
-   });
-
+    setState(() {
+      pokemons = data;
+    });
   }
 
-  void initState(){
+  void initState() {
     _fetchData();
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text("P@KEDEX APP"),
-        centerTitle: true,
+        title: Text("P0KEAPP"),
+        centerTitle: false,
+        actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: const <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+              ),
+              child: Text(
+                'Pokedex',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+            ),
+            ListTile(
+              leading: Icon(Icons.exit_to_app),
+              title: Text('Exit'),
+            ),
+          ],
+        ),
       ),
       body: Container(
-            child:
-            pokemons == null ?
-            Center(
-              child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+        child: pokemons == null
+            ? Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                ),
+              )
+            : GridView.count(
+                crossAxisCount: 2,
+                children: List.generate(
+                    pokemons.pokemons.length,
+                    (index) => PokeCard(
+                          pokeURL: pokemons.pokemons[index].url,
+                        )),
               ),
-            )
-                : GridView.count(
-              crossAxisCount: 2,
-              children: List.generate(pokemons.pokemons.length,
-                      (index) =>
-                          PokeCard(
-                    pokeURL: pokemons.pokemons[index].url,
-                  )),
-            ),
-          ),
-
-
-      );
-
+      ),
+    );
   }
 }
-
-

@@ -34,6 +34,10 @@ fake_async
 2.12
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib/
+flutter_keyboard_visibility
+2.2
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility-0.7.0/
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_keyboard_visibility-0.7.0/lib/
 http
 2.4
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.12.2/
@@ -58,6 +62,10 @@ pedantic
 2.12
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.10.0/
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/pedantic-1.10.0/lib/
+search_widget
+2.2
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/search_widget-1.0.2/
+file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/search_widget-1.0.2/lib/
 source_span
 2.12
 file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.0/
