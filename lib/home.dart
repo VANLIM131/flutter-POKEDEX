@@ -5,20 +5,20 @@ import 'pokemon.dart';
 import 'pokemon_card.dart';
 import 'dart:io';
 
-class MyHomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   static const String url =
       'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _HomePageState extends State<HomePage> {
   Pokemons pokemons;
 
   Color bgColor = Color(0xFF393636);
   Future<List<Pokemons>> _fetchData() async {
-    final response = await http.get(MyHomePage.url);
+    final response = await http.get(HomePage.url);
     final decode = json.decode(response.body);
     final data = Pokemons.fromJson(decode['results']);
     print(data.pokemons);
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text("P0KEAPP"),
+        title: Text("PokeDex"),
         centerTitle: false,
         actions: [IconButton(icon: Icon(Icons.search), onPressed: () {})],
       ),
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.blueGrey,
               ),
               child: Text(
-                'Pokedex',
+                'Profile',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,

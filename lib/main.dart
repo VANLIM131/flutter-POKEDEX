@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pokedex_view.dart';
+import 'home.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,11 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Pokedex",
+      title: "My Project",
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
+        fontFamily: 'Google',
+        brightness: Brightness.light,
       ),
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
