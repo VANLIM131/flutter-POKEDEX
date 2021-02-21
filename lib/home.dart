@@ -88,3 +88,34 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class DataSearch extends SearchDelegate<String> {
+  final search = [];
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    // TODO: appbar action
+    return [IconButton(icon: Icon(Icons.clear), onPressed: () {})];
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    // TODO: leading icon to left bar
+    return IconButton(
+        icon: AnimatedIcon(
+          icon: AnimatedIcons.menu_arrow,
+          progress: transitionAnimation,
+        ),
+        onPressed: () {});
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // TODO: show results
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    // TODO: shows something when searched
+  }
+}

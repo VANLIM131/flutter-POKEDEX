@@ -104,6 +104,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "rainbow_color",
+      "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/rainbow_color-0.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "rainbow_vis",
+      "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/rainbow_vis-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
       "name": "search_widget",
       "rootUri": "file:///D:/System/flutter/.pub-cache/hosted/pub.dartlang.org/search_widget-1.0.2",
       "packageUri": "lib/",
@@ -170,7 +182,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-02-21T11:56:29.332704Z",
+  "generated": "2021-02-21T12:27:35.670317Z",
   "generator": "pub",
   "generatorVersion": "2.12.0-259.8.beta"
 }

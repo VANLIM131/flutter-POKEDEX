@@ -149,6 +149,7 @@ class DetailPage extends StatelessWidget {
           Text(
             "Base Stats",
             style: TextStyle(
+                fontFamily: "Roboto",
                 fontWeight: FontWeight.w400,
                 fontSize: 24,
                 color: Colors.white,
