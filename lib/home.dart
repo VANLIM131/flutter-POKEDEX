@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'pokemon.dart';
-import 'pokemon_card.dart';
-import 'dart:io';
+import 'page.dart';
+//import 'dart:io';
 
 class HomePage extends StatefulWidget {
   static const String url =
@@ -65,6 +65,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: Icon(Icons.exit_to_app),
               title: Text('Exit'),
+              //onTap: ()=> exit(0),
             ),
           ],
         ),

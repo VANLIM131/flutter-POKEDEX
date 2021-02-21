@@ -33,7 +33,7 @@ class _PokeCardState extends State<PokeCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(5, 8, 5, 0),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
       child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),

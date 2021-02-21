@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
         fontFamily: 'Google',
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
       ),
       home: HomePage(),
     );

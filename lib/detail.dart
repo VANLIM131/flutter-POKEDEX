@@ -5,7 +5,7 @@ import 'pokemon.dart';
 class DetailPage extends StatelessWidget {
   Pokemon pokemon;
 
-  Color bgColor = Color(0xFF171515);
+  Color bgColor = Color(0xFF323536);
   DetailPage(this.pokemon);
 
   @override
@@ -13,33 +13,15 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text("Pokedex"),
+        title: Text("Info"),
         backgroundColor: _setColor(pokemon),
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          tooltip: "Return to list",
           onPressed: () {
             Navigator.pop(context, true);
           },
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: pokemon == null
-                ? Center(
-                    child: Text('NaN'),
-                  )
-                : Center(
-                    child: Text(
-                    '#0${pokemon.id.toString()}',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 25,
-                        color: Colors.white),
-                  )),
-          )
-        ],
       ),
       body: Column(
         children: [
@@ -71,7 +53,7 @@ class DetailPage extends StatelessWidget {
           Text(
             pokemon.name,
             style: TextStyle(
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.bold,
                 fontSize: 40,
                 color: Colors.white,
                 letterSpacing: 3),
@@ -163,7 +145,6 @@ class DetailPage extends StatelessWidget {
                 itemCount: pokemon.stats.length,
                 itemBuilder: (context, index) {
                   final poke = pokemon.stats[index];
-
                   return Column(
                     children: [
                       Text(

@@ -65,7 +65,7 @@ class Pokemon {
   });
 
   factory Pokemon.fromJson(Map<String, dynamic> json) => Pokemon(
-        id: json["id"],
+        id: json["ID"],
         name: json["name"],
         weight: json["weight"],
         height: json["height"],
