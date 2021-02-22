@@ -11,7 +11,6 @@ class DetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Info"),
-        backgroundColor: Colors.amber,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -21,14 +20,6 @@ class DetailPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(
-            pokemon.name,
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 40,
-                color: Colors.white,
-                letterSpacing: 1),
-          ),
           Stack(
             alignment: Alignment.center,
             children: [
@@ -46,6 +37,21 @@ class DetailPage extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 90,
                   backgroundColor: Colors.yellow,
+                ),
+              ),
+              Text(
+                pokemon.name,
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 40,
+                    color: Colors.black,
+                    letterSpacing: 35),
+              ),
+              Positioned(
+                child: CircleAvatar(
+                  radius: 90,
+                  backgroundColor: Color.fromRGBO(0, 0, 0, 0),
                   backgroundImage: NetworkImage(pokemon.sprites.frontDefault),
                 ),
               ),
@@ -66,13 +72,11 @@ class DetailPage extends StatelessWidget {
                       child: Text(
                         pokemon.types[index].type.name,
                         style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontSize: 20,
+                          fontSize: 30,
                         ),
                       ),
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(30)),
                     );
                   }),
             ),
@@ -115,9 +119,10 @@ class DetailPage extends StatelessWidget {
             ],
           ),
           Text(
-            "Status",
+            "PROFILE",
             style: TextStyle(
               fontSize: 50,
+              fontWeight: FontWeight.bold,
               color: Colors.pink,
             ),
           ),
@@ -128,11 +133,21 @@ class DetailPage extends StatelessWidget {
                   final list = pokemon.stats[index];
                   return Column(
                     children: [
+                      Container(
+                        height: 5,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            color: Colors.yellow,
+                            borderRadius: BorderRadiusDirectional.vertical(
+                              top: Radius.zero,
+                              bottom: Radius.zero,
+                            )),
+                      ),
                       Text(
                         '${list.stat.name} ${list.baseStat}',
                         style: TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.w900,
                           color: Colors.white,
                         ),
                       ),
