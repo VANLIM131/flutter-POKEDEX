@@ -16,7 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Pokemons pokemons;
 
-  Color bgColor = Color(0xFF393636);
+  // ignore: missing_return
   Future<List<Pokemons>> _fetchData() async {
     final response = await http.get(HomePage.url);
     final decode = json.decode(response.body);
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
         title: Text("PokeDex"),
         centerTitle: false,

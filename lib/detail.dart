@@ -30,19 +30,15 @@ class DetailPage extends StatelessWidget {
             children: [
               Container(
                 height: 250,
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                     color: _setColor(pokemon),
                     borderRadius: BorderRadiusDirectional.vertical(
                         top: Radius.zero, bottom: Radius.circular(50))),
-                // child:   Image.asset('assets/tes4.png',
-                //   height:250//MediaQuery.of(context).size.height/3,
-                //   ,fit:BoxFit.cover,
-                //
-                // ),
               ),
               Positioned(
                 child: CircleAvatar(
-                  radius: 100,
+                  radius: 90,
                   backgroundColor: Colors.white54,
                   backgroundImage: NetworkImage(pokemon.sprites.frontDefault),
                 ),
@@ -130,9 +126,8 @@ class DetailPage extends StatelessWidget {
           Text(
             "Base Stats",
             style: TextStyle(
-                fontFamily: "Roboto",
-                fontWeight: FontWeight.w400,
-                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
                 color: Colors.white,
                 decoration: TextDecoration.underline,
                 letterSpacing: 2),

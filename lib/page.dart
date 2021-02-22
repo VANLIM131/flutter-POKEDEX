@@ -33,14 +33,14 @@ class _PokeCardState extends State<PokeCard> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      padding: const EdgeInsets.fromLTRB(0, 0, 0, 100),
       child: Card(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
           color: Colors.grey,
           child: Card(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(100)),
+                  borderRadius: BorderRadius.circular(150)),
               color: Colors.black45,
               child: InkWell(
                 onTap: () {
@@ -64,7 +64,7 @@ class _PokeCardState extends State<PokeCard> {
                           Text(
                             pokemon.name,
                             style: TextStyle(
-                                fontSize: 28,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white),
                           )

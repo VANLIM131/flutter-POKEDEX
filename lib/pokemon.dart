@@ -46,6 +46,7 @@ class Pokemon {
   List<Species> forms;
   List<Ability> abilities;
   int weight;
+  // ignore: non_constant_identifier_names
   int base_experience;
   int height;
 
