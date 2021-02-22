@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Pokemons pokemons;
+  Pokemons pokemon;
 
   // ignore: missing_return
   Future<List<Pokemons>> _fetchData() async {
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     print(data.pokemons);
 
     setState(() {
-      pokemons = data;
+      pokemon = data;
     });
   }
 
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[700],
+      backgroundColor: Colors.yellowAccent,
       appBar: AppBar(
         title: Text("PokeDex"),
         centerTitle: false,
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           children: const <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blueGrey,
+                color: Colors.grey,
               ),
               child: Text(
                 'Profile',
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Container(
-        child: pokemons == null
+        child: pokemon == null
             ? Center(
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
@@ -80,9 +80,9 @@ class _HomePageState extends State<HomePage> {
             : GridView.count(
                 crossAxisCount: 2,
                 children: List.generate(
-                    pokemons.pokemons.length,
+                    pokemon.pokemons.length,
                     (index) => PokeCard(
-                          pokeURL: pokemons.pokemons[index].url,
+                          pokeURL: pokemon.pokemons[index].url,
                         )),
               ),
       ),

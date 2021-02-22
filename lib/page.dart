@@ -35,13 +35,14 @@ class _PokeCardState extends State<PokeCard> {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 0, 0, 100),
       child: Card(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-          color: Colors.grey,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          color: Colors.black87,
           child: Card(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(150)),
-              color: Colors.black45,
+                  borderRadius: BorderRadius.circular(30)),
+              color: Colors.yellowAccent[700],
               child: InkWell(
                 onTap: () {
                   Navigator.push(
@@ -66,7 +67,7 @@ class _PokeCardState extends State<PokeCard> {
                             style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                                color: Colors.black),
                           )
                         ],
                       ),
