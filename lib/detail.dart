@@ -24,7 +24,25 @@ class DetailPage extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
+                height: 75,
+                width: 700,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: Colors.yellowAccent,
+                    borderRadius: BorderRadiusDirectional.vertical(
+                      top: Radius.circular(50),
+                      bottom: Radius.circular(50),
+                    )),
+              ),
+              Positioned(
+                child: CircleAvatar(
+                  radius: 110,
+                  backgroundColor: Colors.yellowAccent,
+                ),
+              ),
+              Container(
                 height: 50,
+                width: 680,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                     color: Colors.yellow,
